@@ -1,0 +1,48 @@
+changeHamletToLeon():
+
+This method replaces occurrences of the word "Hamlet" (case-sensitive) with "Leon" and
+occurrences of the word "HAMLET" (case-sensitive) with "LEON" in the hamletData string.
+It uses regular expressions (Pattern and Matcher) to find and replace the occurrences.
+First, a pattern is compiled to match the word "Hamlet" and then changeText() is called
+with the pattern and the replacement string "Leon".
+Next, a pattern is compiled to match the word "HAMLET" and then changeText() is called with
+ the pattern and the replacement string "LEON".
+After each call to changeText(), the hamletData string is updated with the results.
+changeHoratioToTariq():
+
+This method works similarly to changeHamletToLeon(), but it replaces occurrences of the word
+"Horatio" (case-sensitive) with "Tariq" and occurrences of the word "HORATIO" (case-sensitive)
+ with "TARIQ".
+Again, regular expressions (Pattern and Matcher) are used to find and replace the occurrences.
+First, a pattern is compiled to match the word "Horatio" and then changeText() is called with
+the pattern and the replacement string "Tariq".
+Next, a pattern is compiled to match the word "HORATIO" and then changeText() is called with
+the pattern and the replacement string "TARIQ".
+After each call to changeText(), the hamletData string is updated with the results.
+changeText(Pattern pattern, String replacement):
+
+This method takes a Pattern and a replacement string as parameters.
+It creates a StringBuffer to hold the result of the replacements.
+It creates a Matcher using the given pattern to search through the hamletData string.
+While the matcher finds matches, it appends replacements to the StringBuffer using the
+appendReplacement() method.
+Once the matcher is done searching through the string, it appends the tail (remaining part
+of the string) to the StringBuffer using appendTail().
+Finally, it returns the updated string as the result.
+findHoratio():
+
+This method searches for the presence of the word "Horatio" in the hamletData string.
+It compiles a pattern to match the word "Horatio" in a case-insensitive manner and creates
+a Matcher to search through the hamletData.
+It returns true if a match is found, indicating that the word "Horatio" is present, and
+false otherwise.
+findHamlet():
+
+This method searches for the presence of the word "Hamlet" in the hamletData string.
+It compiles a pattern to match the word "Hamlet" in a case-insensitive manner and creates
+a Matcher to search through the hamletData.
+It returns true if a match is found, indicating that the word "Hamlet" is present, and false
+otherwise.
+Overall, these methods are performing pattern matching and text replacement in the hamletData
+string using regular expressions (Pattern and Matcher). The methods allow you to find the
+presence of certain words and replace them as needed.
